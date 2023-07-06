@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/nest-learning/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/nest-learning/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/nest-learning",
+  "projects": {
+    "nest-learning": {
+      "type": "application",
+      "root": "apps/nest-learning",
+      "entryFile": "main",
+      "sourceRoot": "apps/nest-learning/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nest-learning/tsconfig.app.json"
+      }
+    },
+    "new-app": {
+      "type": "application",
+      "root": "apps/new-app",
+      "entryFile": "main",
+      "sourceRoot": "apps/new-app/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/new-app/tsconfig.app.json"
+      }
+    }
+  }
+}
